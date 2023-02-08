@@ -1,0 +1,30 @@
+﻿@model OgrenciSistemiMVC.Models.Personal
+@{
+    ViewBag.Title = "PersonalGetir";
+    Layout = "~/Views/Shared/_OgrenciLayout.cshtml";
+}
+
+<h2 style="margin-top:25px">Personal Listesi</h2>
+
+@using (Html.BeginForm("PersonalGuncelle", "Personal", FormMethod.Post))
+
+{
+    <form class="form-group" method="post">
+        <div style="margin-bottom: 15px">
+            @Html.HiddenFor(y => y.Id)
+            @Html.LabelFor(x => x.AdSoyad)
+            @Html.TextBoxFor(x => x.AdSoyad, new { @class = "form-control" })
+        </div>
+        <div style="margin-bottom: 15px">
+            @Html.LabelFor(x => x.Gorevi)
+            @Html.TextBoxFor(x => x.Gorevi, new { @class = "form-control" })
+        </div>
+        <div style="margin-bottom: 15px">
+            @Html.LabelFor(x => x.YonetimTip)
+            @Html.TextBoxFor(x => x.YonetimTip, new { @class = "form-control" })
+        </div>
+        <button class="btn btn-success">Güncelle</button>
+    </form>
+}
+
+

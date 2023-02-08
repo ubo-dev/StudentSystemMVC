@@ -1,0 +1,32 @@
+﻿@using OgrenciSistemiMVC.Models;
+@model List<Ders>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_OgrenciLayout.cshtml";
+}
+
+<table class="table table-bordered" style="margin-top:25px">
+    <tr>
+        <th>ID</th>
+        <th>Ders Adı</th>
+        <th>Kredisi</th>
+        <th>Dersi Veren Kişi</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td bgcolor="@x.DersRenk" style="color:white">@x.Ad</td>
+            <td>@x.Kredi</td>
+            <td>@x.Personal.AdSoyad</td>
+            <td><a href="/Ders/DersSil/@x.Id" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Ders/DersGetir/@x.Id" class="btn btn-warning">Güncelle</a></td>
+        </tr>
+
+    }
+</table>
+<a href="/Ders/DersEkle" class="btn btn-primary">Yeni Ders</a>
+

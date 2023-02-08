@@ -1,0 +1,33 @@
+﻿@model OgrenciSistemiMVC.Models.Ders
+@{
+    ViewBag.Title = "DersGetir";
+    Layout = "~/Views/Shared/_OgrenciLayout.cshtml";
+}
+
+<h2 style="margin-top:25px">Ders Getir</h2>
+
+@using (Html.BeginForm("DersGuncelle", "Ders", FormMethod.Post))
+
+{
+    <form class="form-group" method="post">
+        <div style="margin-bottom: 15px">
+            @Html.HiddenFor(y => y.Id)
+            @Html.LabelFor(x => x.Id)
+            @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+        </div>
+        <div style="margin-bottom: 15px">
+            @Html.LabelFor(x => x.Kredi)
+            @Html.TextBoxFor(x => x.Kredi, new { @class = "form-control" })
+        </div>
+        <div style="margin-bottom: 15px">
+            @Html.LabelFor(x => x.OkulYonetimId)
+            @Html.TextBoxFor(x => x.OkulYonetimId, new { @class = "form-control" })
+        </div>
+        <div style="margin-bottom: 15px">
+            @Html.LabelFor(x => x.DersRenk)
+            @Html.TextBoxFor(x => x.DersRenk, new { @class = "form-control" })
+        </div>
+        <button class="btn btn-success">Güncelle</button>
+    </form>
+}
+

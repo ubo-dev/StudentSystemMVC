@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="38dfd51d2754467d83cacacb71428f19" Name="Diagram1">
+        <EntityTypeShape EntityType="DbOgrenciYonetimiModel.Ders" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbOgrenciYonetimiModel.Ogrenci" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbOgrenciYonetimiModel.OgrenciDers" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbOgrenciYonetimiModel.OkulYonetimi" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbOgrenciYonetimiModel.Personal" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="DbOgrenciYonetimiModel.FK_Ders_Personal" ManuallyRouted="false" />
+        <AssociationConnector Association="DbOgrenciYonetimiModel.FK_OgrenciDers_Ders" ManuallyRouted="false" />
+        <AssociationConnector Association="DbOgrenciYonetimiModel.FK_OgrenciDers_Ogrenci" ManuallyRouted="false" />
+        <AssociationConnector Association="DbOgrenciYonetimiModel.FK_Personal_OkulYonetimi" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
